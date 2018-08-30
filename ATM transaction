@@ -1,0 +1,43 @@
+
+R100 = int(input('Enter the number of 100 Rupees notes in ATM :'))
+R200 = int(input('Enter the number of 200 Rupees notes in ATM :'))
+R500 = int(input('Enter the number of 500 Rupees notes in ATM :'))
+R2000 = int(input('Enter the number of 2000 Rupees notes in ATM :'))
+if(R100>0):
+    dispense = int(input('Enter the amount you want to dispense in multiple of 100 :'))
+elif(R200>0):
+    dispense = int(input('Enter the amount you want to dispense in multiple of 200 :'))
+elif(R500>0):
+    dispense = int(input('Enter the amount you want to dispense in multiple of 500 :'))
+elif(R2000>0):
+    dispense = int(input('Enter the amount you want to dispense in multiple of 2000 :'))
+else:
+    print ('No CASH in ATM please visit nearest ATM')
+
+while(dispense>=20000):
+    dispense = int(input('Maximum 20000 rupees can be withdrawn at a time from ATM, Please Enter right amount :'))
+a=0
+while(dispense>=2000 and R2000>0):
+    R2000=R2000-1
+    dispense = dispense-2000
+    a=a+1
+b=0
+while(dispense>=500 and R500>0):
+    R500=R500-1
+    dispense = dispense-500
+    b=b+1
+c=0
+while(dispense>=200 and R200>0):
+    R200=R200-1
+    dispense = dispense-200
+    c=c+1;
+d=0
+while(dispense>=100 and R100>0):
+    R100=R100-1
+    dispense = dispense-100
+    d=d+1;
+
+if(dispense==0):
+    print ('Please collect your cash')
+else:
+    print ('Unable to dispense')
