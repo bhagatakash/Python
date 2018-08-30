@@ -1,0 +1,28 @@
+N = int(input('N :'))
+fib = [1,1]
+for i in range(2,N):
+    l=fib[i-1]+fib[i-2]
+    fib.append(l)
+    
+h=0
+f=N-1
+
+for i in range(N):
+    for j in range(h):
+        print(" ",end="")
+    for j in range(fib[f]):
+        print("*",end="")
+    c=f
+    x=0
+    while(c>0):
+        x=x+fib[c-1]
+        c=c-1
+    x=x*2-1
+    for j in range(x):
+        print(" ",end="")
+    if(i!=N-1):
+        for j in range(fib[f]):
+            print("*",end="")
+    h=h+fib[f]
+    f=f-1
+    print()
