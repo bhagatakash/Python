@@ -1,0 +1,17 @@
+value = input('print value :')
+length = len(value)
+work=length-4
+w=0
+if(length%2==0):
+    print(value[0], end="")
+    print(",", end="")
+    w=w+1
+while(w<=work):
+    print(value[w],end="")
+    w=w+1
+    print(value[w],end="")
+    print(",", end="")
+    w=w+1
+print(value[length-3],end="")
+print(value[length-2],end="")
+print(value[length-1],end="")
