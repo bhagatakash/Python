@@ -1,0 +1,50 @@
+x=0
+y=0
+z=0
+Question_1 = int(input('Oral Cancer Detection and prevention at early stage \n \n \n Are you Alcohol or tobacco addicted ? \n write \n 1 for Alcohol Addiction or \n 2 for tobacco addiction \n 3 for Addicted with tobacco and Alcohol \n 4 for not addicted at all.\n Answer :'))
+if Question_1==1:
+    x=x+15
+elif Question_1==2:
+    x=x+15
+elif Question_1==3:
+    x=x+30
+Question_2 = int(input('Answer the given question carefully; \n \n 1. Are you feeling any Sores, swellings, lumps or thick patches anywhere in or around your mouth or throat. write   \n 1 for yes or \n 0 for no:'))
+if Question_2==1:
+    y=y+6
+Question_3 = int(input('2. Can you see areas of red or white lesions in your mouth or lips ? write \n 1 for yes or \n 0 for no:'))
+if Question_3==1:
+    y=y+6
+Question_4 = int(input('3. Are you feeling like a lump or object stuck in your throat ? write \n 1 for yes or \n 0 for no:'))
+if Question_4==1:
+    y=y+6
+Question_5 = int(input('4. Is there in your mouth any kind of Swellings that make wearing dentures uncomfortable ? write \n 1 for yes or \n 0 for no:'))
+if Question_5==1:
+    y=y+6
+Question_6 = int(input('5. Can you feel Numbness, pain or tenderness anywhere in your mouth, including your tongue ? write \n 1 for yes or \n 0 for no:'))
+if Question_6==1:
+    y=y+6
+Question_7 = int(input('6. Can you feel pain in one of your ears but without any loss of hearing ? write  \n 1 for yes or \n 0 for no:'))
+if Question_7==1:
+    y=y+6
+Question_8 = int(input('7. Is it trouble moving your jaw or tongue ? write  \n 1 for yes or \n 0 for no:'))
+if Question_8==1:
+    y=y+6
+Question_9 = int(input('8. Are you facing problems with chewing, swallowing or speaking ?  write \n 1 for yes or \n 0 for no:'))
+if Question_9==1:
+    y=y+6
+Question_10 = int(input('9. Are you loosing teeth with no apparent dental cause ? write \n 1 for yes or \n 0 for no:'))
+if Question_10==1:
+    y=y+6
+Question_11 = int(input('10. Is it lingering sore throat or hoarseness ? write \n 1 for yes or \n 0 for no:'))
+if Question_11==1:
+    y=y+6
+Question_12 = int(input('These are the basic symptoms which are most common to Oral Cancer patients \n From how long you are facing one or more than one of these mentioned problems ? \n 1 for less than 2 weeks. \n 2 for exactly 2 or more than 2 weeks. \n 3 for not facing any of the available issues '))
+if Question_12==1:
+    z=x+y
+    print('%d percentage chances are there that you are facing oral cancer and you need to book an appointment with the nearest hospital to go for complete checkups.\n We request you to be early as it is safer for you to get rid of it' %z)
+elif Question_12==2:
+    z=x+65
+    print('% z percentage chances are there that you are suffering from oral cancer and \n we suggest you to take immediate action to save yourself from this illness as its very hard for you to survive in later stage ' %z)
+elif Question_12==3:
+    print('As per the available data you are not facing any common Oral Cancer symptoms but these list are not complete\n research is still going on if you think that a problem you are facing is not mentioned please book an appointment in nearest Hospital for complete medical checkups ?')
+
