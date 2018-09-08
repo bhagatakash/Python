@@ -1,0 +1,134 @@
+"""
+Find a matching Groom for a Bride
+Write a program to find a matching groom for a bride. You have been given personality-type-number of grooms (integer array A), personality-type-number of a bride (integer B), 1st round shortlist count (integer X), 2nd round shortlist count (integer Y). Write a program to find the matched groom's personality-type-number based on the following steps.
+
+ 
+
+Input
+
+10
+
+5 10 20 2 4 5 1 9 50 8
+6
+5
+3
+
+ 
+
+where
+
+First line contains a number of grooms. (integer N)
+Second line contains a list of personality-type-number of grooms. (integer array A)
+Third line contains a bride's personality-type-number. (integer B)
+Fourth line contains 1st round shortlist count (integer X)
+Fifth line contains 2nd round shortlist count (integer Y)
+ 
+
+Output
+
+9
+
+ 
+
+Explanation about each round's process
+
+Groom's personality-type-number selection is a 3-round elimination process.
+
+ 
+
+Round 1: Find X closest grooms personalities out of array A matching to B. 
+
+E.g.
+
+    Bride’s personality-type number, B = 6
+    Array of grooms personality-type number, A = [ 5, 10, 20, 2, 4, 5, 1, 9, 50, 8]
+    1st level shortlist count X = 5
+
+ 
+
+    Here the closest 5 grooms to bride are 0th (5), 4th (4), 5th (5), 7th (9) and 9th (8). These grooms are shortlisted for 2nd round.
+
+    Note: If a matched number of candidates are more than shortlist value X, return -1.
+
+ 
+
+Round 2: Find the Y grooms who got maximum 1 in their binary representation of personality-type-number. 
+
+E.g.    
+
+    Array after round 1 = [5, 4, 5, 9, 8]
+    2nd level shortlist count Y = 3
+    
+    Here binary codes of the array are 
+    [ 0101, 0100, 0101, 1001, 1000]
+    
+    The 3 shortlisted grooms are 0th (5), 2nd (5) and 3rd (9). These are shortlisted for 3rd round.
+
+    Note: If a matched number of candidates are more than shortlist value Y, return -2.
+
+ 
+
+Round 3: Find the groom who got highest GCF(Greatest Common Factor) value with the bride’s personality-type-number.
+E.g.
+
+    Array after round 2 = [5, 5, 9]
+    Bride’s personality-type number, B = 6
+
+    
+
+    Here, the highest GCF value is 3, between 9 and 6. 
+    GCF between 2nd groom’s personality-type number (9) and the bride’s personality-type number (6) 
+        = GCF of (9, 6) 
+        = 3
+
+ 
+
+    Note: If a matched number of candidates are more than 1, return -3.
+
+ 
+
+The function should return value 9, which is a matching personality-type-number of a groom.
+
+ 
+
+Assumptions:
+
+Personality-type-number values will be in the range [1 to 100000].
+Number of grooms who can participate is between 1 to 1000. 
+Compiler:  
+solution.py
+
+N =int(input())
+
+"""
+
+
+
+
+N =int(input())
+A = [int(N) for N in input().split( )]
+B=int(input())
+X=int(input())
+Y=int(input())
+t=0
+#round 1
+def round
+    R1=[]
+    match = 0
+    newA = [x-B for x in A]
+    while(t<=X-1):
+        b=min(newA)
+        v=max(newA)
+        c=newA.count(b)
+        k=newA.index(b)
+        for i in range(c):
+            R1.append(A[k])
+            del newA[k]
+            newA.insert(k,v)
+        t=len(R1)
+    
+    check(X):
+        if(t>R1):
+            return -1
+
+#round 2
