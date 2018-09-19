@@ -1,0 +1,22 @@
+Factorial of a number
+Given a positive integer, find its factorial of it.  
+
+ 
+
+Reference: https://en.wikipedia.org/wiki/Factorial
+
+ 
+
+Write a function solution that accepts a number N and returns its factorial.
+
+ 
+
+Use the for statement.
+
+ 
+
+For N = 5, factorial of 5 (5!) = 5 * 4 * 3 * 2 * 1 = 120
+
+
+
+
