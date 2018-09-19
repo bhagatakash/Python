@@ -1,0 +1,36 @@
+Count number of Squares
+Given two integers A & B, count the number of square numbers between them (both inclusive). 
+
+ 
+
+write a function: 
+        public int solution(int A, int B)
+
+that accept two integers A and B. The function should return a count of square numbers between A and B. 
+
+ 
+
+Input 
+    4 
+    17 
+
+ 
+
+    where, 
+
+First line of represents integer A. 
+Second line represents integer B. 
+ 
+
+Output 
+    3 
+
+ 
+
+Between 4 and 17 there 3 squares numbers (4, 9 and 16). 
+
+ 
+
+Assume that 
+
+A and B are integers within the range [1 to 2,000,000,000] 
