@@ -1,0 +1,21 @@
+Count trailing zeros in factorial of a number
+Given an integer N, count the trailing zeros in factorial of N. 
+
+ 
+
+Write a function solution that accepts an integer N. The function should return a count of trailing zeros in factorial of N. 
+
+ 
+
+Input 
+    20 
+
+ 
+
+Output 
+    4 
+
+ 
+
+Factorial of 20 = 2432902008176640000 which contains 4 trailing zeros. 
+
