@@ -1,0 +1,23 @@
+Print series from N to 0
+Given an integer N, print the sequence of integers from N to 0.
+
+ 
+
+Write a function solution that accepts an integer, and prints a sequence of integers from N up to 0 using do-while statement.
+
+ 
+
+Input
+    -8
+
+ 
+
+Output
+    -8 -7 -6 -5 -4 -3 -2 -1 0
+
+ 
+
+    Where,
+
+There must be a single space between consecutive numbers.
+There should be no spaces after the last number.
