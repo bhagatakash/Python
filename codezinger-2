@@ -1,0 +1,23 @@
+Print sequence of even numbers
+Given an integer N, print positive even numbers up to N using while statement. 
+
+ 
+
+Write a function solution that accepts a number N and prints even numbers up to N. 
+
+ 
+
+Input 
+    19 
+
+ 
+
+Output 
+    2 4 6 8 10 12 14 16 18 
+
+ 
+
+Where, 
+
+There must be a single space between consecutive numbers. 
+There should be no spaces before the first number and after the last number. 
