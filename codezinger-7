@@ -1,0 +1,27 @@
+Armstrong Number
+Given an integer N, find whether it is Armstrong number or not. 
+
+ 
+
+Reference: https://illuminations.nctm.org/Lesson.aspx?id=2166
+
+ 
+
+Write a function solution that accepts an integer N. The function should return 1 if it is an Armstrong number else 0. 
+
+ 
+
+Input
+    153 
+
+ 
+
+Output
+    1 
+
+ 
+
+For 153 number of digits are 3.
+
+Sum of digits raises to the power total number of digits = 13 + 53 + 33 = 153, which is equal to an original number and hence 153 is an Armstrong number.
+
