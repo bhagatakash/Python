@@ -1,0 +1,29 @@
+Print a sequence of alphabets
+Given an alphabet, print all the alphabets up to and including the given alphabet. 
+
+ 
+
+Write a function solution that accepts a character C, and prints alphabets up to the given character. 
+
+ 
+
+Input
+    d 
+
+ 
+
+Output
+    a b c d 
+
+ 
+
+    Where, 
+
+There must be a single space between consecutive alphabets.
+There should be no spaces after the last alphabet.
+ 
+
+Assume that, 
+
+C is a character within the range [{'a'...'z'}, {'A'...'Z'} ]. 
+Alphabet(s) in input & output are case-sensitive. 
