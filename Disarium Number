@@ -1,0 +1,43 @@
+"""
+Disarium Number
+Given an integer N, find whether N is a Disarium or not. 
+
+ 
+
+Write a function solution that accepts an integer N. The function should returns 1 if N is Disarium number else 0. 
+
+ 
+
+Input 
+    135 
+
+ 
+
+Output 
+    1 
+
+ 
+
+For 135, sum of digits powered with their respective position = 11 + 32 + 53 = 135, which is equal to an original number. 
+"""
+
+
+def solution(N):
+    # Write your code here.
+    c=0
+    N=str(N)
+    s=len(N)
+    N=int(N)
+    for i in range(s):
+        x=i+1
+        N=str(N)
+        d=N[i]
+        d=int(d)
+        N=int(N)
+        c=c+(d**x)
+    if(c==N):
+        return 1
+    else:
+        return 0
+N=int(input())
+print(solution(N),end='')
