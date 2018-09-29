@@ -1,0 +1,54 @@
+"""
+Binary Search
+Given a sorted array and an element to search, find the index of the element using the binary search algorithm. If the element is not found in the array return -1. 
+
+ 
+
+Reference: http://www.algolist.net/Algorithms/Binary_search
+
+ 
+
+Write a function solution that accepts a sorted array of numbers A, size of the array N and the element to search E. The function should return the index of the element.
+
+ 
+
+Input
+    10 
+    2 4 5 6 8 12 15 18 30 54
+    8 
+
+ 
+
+    where, 
+
+The first line represents the size of an array. 
+The second line represents array elements. 
+The third line represents the element to search. 
+ 
+
+Output
+    4 
+
+ 
+
+The given array contains the element 8 at index 4 (index starts from 0).
+"""
+
+def Solution(N,A,E):
+    z=E in A
+    if(z==True):
+        c=A.index(E)
+        print(c)
+    else:
+        print(-1)
+
+N=int(input())
+A=[]
+n=0
+for i in input().split():
+    if(n<N):
+        A.append(int(i))
+        n+=n
+E=int(input())
+
+Solution(N,A,E)
