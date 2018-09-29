@@ -1,0 +1,71 @@
+"""
+Print number pattern – Part 2
+Given an integer N, print the following pattern. 
+
+ 
+
+For input 5
+
+        1
+      2  3
+    4   5   6
+      2  3
+        1
+
+  
+
+    Where,
+
+First and the last row ends with 1. 
+There must be single space between 2 numbers in the row. 
+There should not be any space after the last number in the row. in the 3rd row, there should not be any space after number 6. 
+ 
+
+Write a function: 
+        void solution(int N) 
+
+that accepts an integer N. A function should print pattern based on a value of N. 
+
+ 
+
+Assume that, 
+
+N is an odd integer within the range [1 to 50].
+
+"""
+
+def Solution(N):
+    x=N//2
+    l=x
+    c=1
+    r=1
+    for i in range(x+1):
+        
+        for i in range(l):
+            print(" ",end="")
+        l=l-1
+        for i in range(r):
+            print(c,end="")
+            if(i<r-1):
+                print(" ",end="")
+            c=c+1
+        r=r+1
+        print()
+    c=c-2*x-1
+    r=x
+    m=1
+    for i in range(x):
+        for i in range(m):
+            print(" ",end="")
+        m=m+1
+        j=c
+        for i in range(r):
+            print(c,end="")
+            if(i<r-1):
+                print(" ",end="")
+            c=c+1
+        c=j-r+1
+        r=r-1
+        print()
+N=int(input())
+Solution(N)
