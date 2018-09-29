@@ -1,0 +1,45 @@
+"""
+Perfect Number
+Given an integer N, find whether N is a Perfect number or not. 
+
+ 
+
+Write a function solution that accepts an integer N. The function should return 1 if N is perfect number else 0. 
+
+ 
+
+Input
+    6 
+
+ 
+
+Output
+    1 
+
+ 
+
+6's proper positive divisors are 1,2 and 3.
+Sum of divisors = 1 + 2 + 3 = 6.
+"""
+
+
+def solution(N):
+    # Write your code here.
+    div=[]
+    for i in range(N-1):
+        x=i+1
+        if(N%x==0):
+            div.append(x)
+    l=len(div)
+    c=0
+    for x in range(l):
+        m=div[x]
+        m=int(m)
+        c=c+m
+    if(c==N):
+        return 1
+    else:
+        return 0
+    
+N = int(input())
+print(solution(N),end='')
