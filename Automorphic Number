@@ -1,0 +1,49 @@
+"""
+Automorphic Number
+Given an integer, check whether it is automorphic or not.
+
+ 
+
+Automorphic number: An automorphic number is a number which is contained in the last digit(s) of its square. e.g. 25 is an automorphic number as its square is 625 and 25 presents as the last two digits. 5, 6 and 75 are also automorphic.
+
+ 
+
+Write a function:
+    boolean solution(int N)
+
+ 
+
+that accepts an integer N. The function should return true if the number is automorphic otherwise false.
+
+ 
+
+Input
+    25
+
+ 
+
+Output
+    true
+
+
+Assume that,
+
+The integer ranges from [0 to 2,147,483,647].
+"""
+
+def Auto(N):
+    s=str(N)
+    l=len(s)
+    val=N*N
+    a=str(val)
+    le=len(a)
+    count=0
+    for i in range(l):
+        if(s[i]==a[le-l+i]):
+            count=count+1
+    if(count==l):
+        print("true")
+    else:
+        print("false")
+N = int(input())
+Auto(N)
