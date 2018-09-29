@@ -1,0 +1,62 @@
+"""
+Fascinating Number
+Given an integer N, find whether N is a Fascinating number or not. 
+
+ 
+
+Write a function: 
+       def solution(int N):
+
+ 
+
+that accepts an integer N. The function should return 1 if N is Fascinating number else 0. 
+
+ 
+
+Input
+    192 
+
+ 
+
+Output
+    1 
+
+ 
+
+192 has 3 digits. Multiply it with 2 & 3 
+192*2 = 384 
+192*3 = 576 
+
+Concatenated result = '192' + '384' + '576' = '192384576', which contains all digits from 1 to 9 exactly once. 
+
+ 
+
+Assume that, 
+
+N is an integer within the range [100 to 10000].
+"""
+
+
+def solution(N):
+    # Write your code here.
+    S=str(N)
+    l=len(S)
+    fas = ""
+    count=0
+    for i in range(l):
+        i=i+1
+        x=N*i
+        x=str(x)
+        fas=fas+x
+    for i in range(9):
+        x=i+1
+        x=str(x)
+        s=x in fas
+        if(s==True):
+            count=count+1
+    if(count==9):
+        return 1
+    else:
+        return 0
+N = int(input())
+print(solution(N),end='')
