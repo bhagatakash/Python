@@ -1,3 +1,5 @@
+"""
+
 Count trailing zeros in factorial of a number
 Given an integer N, count the trailing zeros in factorial of N. 
 
@@ -18,4 +20,27 @@ Output
  
 
 Factorial of 20 = 2432902008176640000 which contains 4 trailing zeros. 
+"""
 
+def solution(N):
+    # Write your code here...
+    x=1
+    
+    if(N==0):
+        return 0
+    else:
+        while (N>0):
+            x=x*N
+            N=N-1
+    x=str(x)
+    t=len(x)
+    t=t-1
+    count=0
+    while(x[t]=='0'):
+        count=count+1
+        t=t-1
+    return count
+
+
+N = int(input())
+print(solution(N),end='')
