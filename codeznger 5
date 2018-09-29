@@ -1,3 +1,4 @@
+"""
 Print multiplication table of a number
 Given an integer N, print its multiplication table using the for statement.
 
@@ -23,4 +24,21 @@ Output
     10*8=80 
     10*9=90 
     10*10=100  
+"""
 
+
+def solution(N):
+    # Write your code here...
+    x=1
+    z=1
+    for i in range(10):
+        print(N,end="")
+        print("*",end="")
+        print(x,end="")
+        print("=",end="")
+        z=x*N
+        print(z)
+        x=x+1
+
+N = int(input())
+solution(N)
