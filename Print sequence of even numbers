@@ -1,3 +1,4 @@
+"""
 Print sequence of even numbers
 Given an integer N, print positive even numbers up to N using while statement. 
 
@@ -21,3 +22,15 @@ Where,
 
 There must be a single space between consecutive numbers. 
 There should be no spaces before the first number and after the last number. 
+"""
+
+def solution(N):
+    # write your code here
+    i=2
+    while(i<=N):
+        print(i,end=" ")
+        i=i+2
+
+
+N = int(input())
+solution(N)
