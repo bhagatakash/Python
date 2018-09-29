@@ -1,0 +1,42 @@
+"""
+Print number pattern – Part 1
+Given an integer N, print the following pattern. 
+
+ 
+
+For N = 5, print 
+
+ 
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+ 
+
+where,
+
+Each row starts with 1. 
+Last row ends with 1 to N number. 
+Single space between 2 numbers in a row. 
+No space after the last number in a row. e.g. In the 3rd row there must not be any space after number 3. 
+ 
+
+Write a function solution that accepts an integer N. The function should print the above pattern. 
+
+"""
+
+def solution(N):
+    # Write your code here.
+    for i in range(N):
+        for x in range(i+1):
+            l=x+1
+            print(l,end="")
+            if(l<i+1):
+                print(" ", end="")
+        print()
+            
+N = int(input())
+solution(N)
