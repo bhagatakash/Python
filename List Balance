@@ -1,0 +1,59 @@
+"""
+List Balance
+Given an unsorted array A, check whether the array is balanced. 
+
+
+Write a function solution that accepts a list L. The function should return 1 if the list is balanced otherwise 0. 
+
+ 
+
+Input
+    5 
+    1  1  1  2  1 
+
+
+    Where, 
+
+First line represents the size of the list, N. 
+Second line represents list elements. 
+     
+Output
+    1 
+
+ 
+
+Here for the given list, the sum of first three elements 1+1+1 is 3 and last two elements 2+1 is 3. Hence the list is balanced. 
+"""
+
+
+def solution(L):
+    # Write your code here.
+    l=len(L)
+    if(l==1):
+        return 0
+    x=0
+    c=0
+    for i in range(l):
+        x=x+L[i]
+    if(x%2==0):
+        c=x/2
+        t=0
+        i=0
+        while(t<c):
+            t=t+L[i]
+            i=i+1
+    else:
+        return 0
+    if(t==c):
+        return 1
+N=int(input())
+L=[]
+n=0
+for e in input().split():
+    if(n<N):
+        L.append(int (e))
+        n+=1
+if(n<N):
+    print("Please input {0} elements".format(N),end='')
+else:
+    print(solution(L),end='')
