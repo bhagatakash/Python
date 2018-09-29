@@ -1,0 +1,37 @@
+"""
+Prime Number
+
+Given an integer, find whether the numbers is a Prime number or not. 
+
+ 
+
+Write a function solution that accepts an integer N. The function should return 1 if N is prime else 0. 
+
+ 
+
+Input
+    11 
+
+ 
+
+Output
+    1 
+
+ 
+
+11 can be divided exactly by 1 and 11. Hence it's a prime number. 
+"""
+
+def solution(N):
+    # Write your code here.
+    if(N==1 or N==0):
+        return 0
+    if(N<0):
+        return 0
+    for i in range(N-3):
+        x=i+2
+        if(N%x==0):
+            return 0
+    return 1
+N = int(input())
+print(solution(N), end='')
