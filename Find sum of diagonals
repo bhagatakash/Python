@@ -1,0 +1,69 @@
+"""
+Find sum of diagonals
+Given a matrix, find a sum of both diagonal elements of the matrix. 
+
+ 
+
+Write a function solution that accepts a matrix A of size N x N as 2D list's elements. The function should return sum of both diagonal elements. 
+
+ 
+
+Input 
+    3 
+    5 8 1 
+    2 3 4 
+    2 4 9 
+
+ 
+
+    Where, 
+
+First line of input represents the size of a matrix N. 
+Second line contains list elements of 1st matrix row and so on. 
+ 
+
+Output 
+     20 
+
+ 
+
+Here for the given matrix, 
+5 3 8 and 1 3 2 are the diagonal elements. 
+
+The sum of diagonal = 1 + 3 + 2 + 5 + 9 = 20
+
+ 
+
+Note: Intersecting element of diagonals (here it's 3) will be included only once. 
+
+ 
+
+Assume that, 
+
+N is an integer within the range [1 to 1000]. 
+
+"""
+import sys
+def solution(A):
+    # Write your code here.
+    l=len(A[0])
+    x=0
+    t=0
+    for i in range(l):
+        x=x+A[i][i]
+    while(i>=0):
+            x=x+A[t][i]
+            i=i-1
+            t=t+1
+    if(l%2!=0):
+        x=x-A[l//2][l//2]
+    return x
+A = []
+N = int(input())
+n=0
+for n in range(N):
+    R = [int(e) for e in input().split()]
+    assert(len(R) == N)
+    A.append(R)
+
+print(solution(A),end='')
