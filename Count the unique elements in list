@@ -1,0 +1,52 @@
+"""
+Count the unique elements in list
+Given a list of integers, find the unique value. Do not use system function to find unique number. 
+
+ 
+
+Write a function solution that accepts a list, L of N integers. The function should return number of unique elements in the list. 
+
+ 
+
+Input
+    10 
+    1 2 3 1 4 2 5 6 7 8 
+
+ 
+
+    where, 
+
+First line represents size of the list. 
+The second line represents list elements separated by single space. All the elements of the list should be on a single line.
+ 
+
+Output 
+    6 
+
+ 
+
+Here in the given list, unique values are [3 4 5 6 7 8] hence the result is 6. 
+
+"""
+
+
+def solution(L):
+    # Write your code here..
+    l=len(L)
+    count=0
+    for i in range(l):
+        z=L.count(L[i])
+        if(z==1):
+            count=count+1
+    return count
+N=int(input())
+L=[]
+n=0
+for e in input().split():
+    if(n<N):
+        L.append(int (e))
+        n+=1
+if(n<N):
+    print("Please input {0} elements".format(N),end='')
+else:
+    print(solution(L),end='')
