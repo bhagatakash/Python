@@ -1,0 +1,63 @@
+"""
+Validate ISBN
+Given a number of type long represents a unique numeric book identifier (International Standard Book Number) which is printed on every book, determine whether the ISBN is legal based on the below rules:
+
+ 
+
+- The ISBN is a 10-digit code.
+
+- The ISBN is legal if: 1 x digit1 + 2 x digit2 + 3 x digit3 + 4 x digit4 + 5 x digit5 + 6 x digit6 + 7 x digit7 + 8 x digit8 + 9 x digit9 + 10 x digit10 is divisible by 11.
+
+ 
+
+Write a function:
+    boolean solution(long ISBN)
+
+ 
+
+that accepts a number of type long and returns true if it's a valid ISBN or false otherwise.
+
+ 
+
+Input
+    1401601499
+
+ 
+
+Output
+    true
+
+ 
+
+Here for 1401601499,
+
+Sum = 1×1 + 2×4 + 3×0 + 4×1 + 5×6 + 6×0 + 7×1 + 8×4 + 9×9 + 10×9 = 253
+
+which is divisible by 11 and hence valid ISBN.
+
+ 
+
+Assume that,
+
+The number ranges from [0 to 9,223,372,036,854,775,807].
+
+"""
+def ISBN(N):
+    d=str(N)
+    le=len(d)
+    if(le==10):
+        c=0
+        for i in range(10):
+            l=i+1
+            m=int(d[i])
+            c=c+(l*m)
+        if(c%11==0):
+            print("true")
+        else:
+            print("false")
+    else:
+        print("false")
+N= int(input())
+ISBN(N)
+
+
