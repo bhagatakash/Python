@@ -1,0 +1,41 @@
+"""
+Neon Number
+Given an integer N, find whether N is a Neon number or not. 
+
+ 
+
+Write a function solution that accepts an integer N. The function should return 1 if N is Neon number else 0. 
+
+ 
+
+Input
+    9 
+
+ 
+
+Output
+    1 
+
+ 
+
+For 9, Square of the 9 = 9 * 9 = 81
+Sum of digit of 18 = 1 + 8 = 9 which is equal to an original number. 
+
+"""
+
+
+def solution(N):
+    # Write your code here.
+    x=N*N
+    s=str(x)
+    l=len(s)
+    c=0
+    for i in range(l):
+        c=c+int(s[i])
+        
+    if(c==N):
+        return 1
+    else:
+        return 0
+N = int(input())
+print(solution(N),end='')
