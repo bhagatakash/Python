@@ -1,3 +1,4 @@
+"""
 Count number of Squares
 Given two integers A & B, count the number of square numbers between them (both inclusive). 
 
@@ -34,3 +35,37 @@ Between 4 and 17 there 3 squares numbers (4, 9 and 16).
 Assume that 
 
 A and B are integers within the range [1 to 2,000,000,000] 
+"""
+def SquareInBetween(A,B):
+    if(A<=B and A>=0):
+        square=[]
+        i=0
+        z=0
+        while(z<=B):
+            x=i+1
+            z=x*x
+            square.append(z)
+            i=i+1
+        t=A
+        x=False
+        while(x == False):
+            x= t in square
+            t=t+1
+        t=t-1
+        c=square.index(t)
+        count=0
+        l=0
+        while(l<=B):
+            count=count+1
+            l=square[c+1]
+            c=c+1
+        print(count)
+    else:
+        print(None)
+    
+    
+    
+    
+A = int(input())
+B = int(input())
+SquareInBetween(A,B)
