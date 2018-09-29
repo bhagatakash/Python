@@ -1,0 +1,78 @@
+"""
+Least Common Multiple (LCM) of two numbers
+Given two integers N1 and N2, find the LCM of those numbers. 
+
+ 
+
+Reference: http://www.math.com/school/subject1/lessons/S1U3L3DP.html
+     
+
+Write a function solution that accepts two integers N1 and N2. The function should return LCM of N1 and N2. 
+
+ 
+
+Input
+    30 
+    50 
+
+ 
+
+Output
+    150 
+
+ 
+
+Factors of 30 = 3 * 5 * 2         
+Factors of 50 = 5 * 5 * 2 
+
+Common factor = 5 * 2 
+Remaining factors = 3 * 5 
+
+LCM = Common factor * remaining factor = (5 * 2 * 3 * 5) = 150
+"""
+
+def solution(N1,N2):
+    # Write your code here.
+    R1=[]
+    R2=[]
+    d=N1
+    c=N2
+    i=2
+    while d>1:        
+        if(d%i==0):
+            d=d//i
+            R1.append(i)
+        else:
+            i=i+1
+    i=2
+    while c>1:        
+        if(c%i==0):
+            c=c//i
+            R2.append(i)
+        else:
+            i=i+1
+    l1=len(R1)
+    l2=len(R2)
+    for i in range(l2):
+        q=R2[i] not in R1
+        if(q==True):
+            R1.append(R2[i])
+    for i in range(l2):
+        s=R2[i] in R1
+        d=R1.count(R2[i])
+        f=R2.count(R2[i])
+        if(s==True and f>1):
+            if(f>d):
+                f=f-d
+                for j in range(f):
+                    R1.append(R2[i])
+    le=len(R1)
+    h=1
+    for i in range(le):
+        h=h*R1[i]
+    
+    
+    return h
+N1 = int(input())
+N2 = int(input())
+print(solution(N1,N2),end='')
