@@ -2,7 +2,7 @@ Print series from N to 0
 Given an integer N, print the sequence of integers from N to 0.
 
  
-
+"""
 Write a function solution that accepts an integer, and prints a sequence of integers from N up to 0 using do-while statement.
 
  
@@ -21,3 +21,23 @@ Output
 
 There must be a single space between consecutive numbers.
 There should be no spaces after the last number.
+"""
+
+def solution(N):
+    # write your code here
+    i=N
+    x=i
+    if(i>0):
+        while(x>=1):
+            print(x,end=" ")
+            x=x-1
+        print(0, end="")
+    else:
+        while(x<=-1):
+            print(x,end=" ")
+            x=x+1
+        print(0,end="")
+
+
+N = int(input())
+solution(N)
