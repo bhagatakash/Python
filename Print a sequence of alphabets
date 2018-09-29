@@ -1,3 +1,4 @@
+"""
 Print a sequence of alphabets
 Given an alphabet, print all the alphabets up to and including the given alphabet. 
 
@@ -27,3 +28,23 @@ Assume that,
 
 C is a character within the range [{'a'...'z'}, {'A'...'Z'} ]. 
 Alphabet(s) in input & output are case-sensitive. 
+"""
+
+import string
+def solution(C):
+    # write your code here
+    small = "abcdefghijklmnopqrstuvwxyz"
+    cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    x=0
+    if (C in cap):
+        m=cap.index(C)
+        while(x<=m):
+            print(cap[x], end=" ")
+            x=x+1
+    else:
+        m=small.index(C)
+        while(x<=m):
+            print(small[x], end=" ")
+            x=x+1
+C = input()
+solution(C)
