@@ -1,0 +1,19 @@
+def BubbleSort(n):
+    for i in n:
+        for j in range(len(n)-1):
+            if (n[j]>n[j+1]):
+                n[j], n[j+1]=n[j+1], n[j]
+    return n
+
+print("The number of element to be sorted out: ")
+
+x=int(input())
+n=[]
+print("Input values :")
+for i in range(x):
+    c=int(input())
+    n.append(c)
+
+n=BubbleSort(n)
+print(n)
+
