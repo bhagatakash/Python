@@ -26,3 +26,18 @@ for i in range(N):
     h=h+fib[f]
     f=f-1
     print()
+"""
+def fib(n):
+    if n==0 or n==1:
+        return 1;
+    else:
+        return fib(n-1)+fib(n-2)
+        print(fib(n))    
+    return fib(n)
+
+n=int(input())
+for i in range(20):    
+    print(fib(i))
+    
+    # to print value of fibonacci through recursion
+"""
