@@ -1,0 +1,34 @@
+def stableselection(x):
+    l=len(x)
+    t=0
+    c=0
+    for i in range(l):
+        j=i+1
+        Min=x[i]
+        while(j<l):
+            if x[j]<Min:
+                Min=x[j]
+                t=j
+                j+=1
+            else:
+                j+=1 
+        j=i+1
+        while t>=j:
+            x[t]=x[t-1]
+            t-=1
+        x[i]=Min
+    print(x)
+            
+            
+
+
+
+
+print("Number of element to be sorted:")
+n=int(input())
+print("Input values:")
+x=[]
+for i in range(n):
+   t=int(input())
+   x.append(t)
+stableselection(x)
