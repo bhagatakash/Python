@@ -1,0 +1,31 @@
+from cx_Freeze import setup, Executable
+import sys
+import os 
+
+os.environ['TCL_LIBRARY'] =r'C:\Users\dm599\AppData\Local\Continuum\anaconda3\tcl\tcl8.6'
+os.environ['TK_LIBRARY'] =r'C:\Users\dm599\AppData\Local\Continuum\anaconda3\tcl\tcl8.6'
+
+
+base = 'Win32GUI'
+
+if sys.platform == 'win32':
+    base = None
+
+
+executables = [Executable("DownloadReports.py", base=base)]
+
+packages = ["os", "idna", "requests","requests_html","pandas","dill","datetime","numpy","pygments","json"]
+options = {
+    'build_exe': {
+        'packages':packages,
+    },
+
+}
+
+setup(
+    name = "DownloadReportsJKGB",
+    options = options,
+    version = "1.0",
+    description = 'download pnb reports',
+    executables = executables
+)
